@@ -4,13 +4,21 @@ namespace Places.Models
 {
     public class Item
     {
-        public string Description { get; set; }
+        public string CityName { get; set; }
+        public string Date { get; set; }
+        public string Days { get; set; }
+        public string Partner { get; set; }
+        public string Journal { get; set; }
         public int Id { get; }
         private static List<Item> _instances = new List<Item> { };
 
-        public Item(string description)
+        public Item(string cityName, string date, string days, string partner, string journal)
         {
-            Description = description;
+            CityName = cityName;
+            Date = date;
+            Days = days;
+            Partner = partner;
+            Journal = journal;
             _instances.Add(this);
             Id = _instances.Count;
         }

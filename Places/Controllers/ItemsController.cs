@@ -21,9 +21,9 @@ namespace Places.Controllers
     }
 
     [HttpPost("/items")]
-    public ActionResult Create(string description)
+    public ActionResult Create(string cityName, string date, string days, string partner, string journal)
     {
-      Item myItem = new Item(description);
+      Item myItem = new Item(cityName, date, days, partner, journal);
       return RedirectToAction("Index");
     }
 
